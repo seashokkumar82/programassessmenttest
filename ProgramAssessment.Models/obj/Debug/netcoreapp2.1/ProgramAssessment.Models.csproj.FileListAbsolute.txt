@@ -1,0 +1,9 @@
+G:\ProgramAssessment\ProgramAssessment.Models\bin\Debug\netcoreapp2.1\ProgramAssessment.Models.deps.json
+G:\ProgramAssessment\ProgramAssessment.Models\bin\Debug\netcoreapp2.1\ProgramAssessment.Models.dll
+G:\ProgramAssessment\ProgramAssessment.Models\bin\Debug\netcoreapp2.1\ProgramAssessment.Models.pdb
+G:\ProgramAssessment\ProgramAssessment.Models\obj\Debug\netcoreapp2.1\ProgramAssessment.Models.csprojAssemblyReference.cache
+G:\ProgramAssessment\ProgramAssessment.Models\obj\Debug\netcoreapp2.1\ProgramAssessment.Models.csproj.CoreCompileInputs.cache
+G:\ProgramAssessment\ProgramAssessment.Models\obj\Debug\netcoreapp2.1\ProgramAssessment.Models.AssemblyInfoInputs.cache
+G:\ProgramAssessment\ProgramAssessment.Models\obj\Debug\netcoreapp2.1\ProgramAssessment.Models.AssemblyInfo.cs
+G:\ProgramAssessment\ProgramAssessment.Models\obj\Debug\netcoreapp2.1\ProgramAssessment.Models.dll
+G:\ProgramAssessment\ProgramAssessment.Models\obj\Debug\netcoreapp2.1\ProgramAssessment.Models.pdb

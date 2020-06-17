@@ -1,0 +1,11 @@
+G:\ProgramAssessment\ProgramAssessment.Entities\bin\Debug\netcoreapp2.1\ProgramAssessment.Entities.deps.json
+G:\ProgramAssessment\ProgramAssessment.Entities\bin\Debug\netcoreapp2.1\ProgramAssessment.Entities.dll
+G:\ProgramAssessment\ProgramAssessment.Entities\obj\Debug\netcoreapp2.1\ProgramAssessment.Entities.csproj.CoreCompileInputs.cache
+G:\ProgramAssessment\ProgramAssessment.Entities\obj\Debug\netcoreapp2.1\ProgramAssessment.Entities.AssemblyInfoInputs.cache
+G:\ProgramAssessment\ProgramAssessment.Entities\obj\Debug\netcoreapp2.1\ProgramAssessment.Entities.AssemblyInfo.cs
+G:\ProgramAssessment\ProgramAssessment.Entities\obj\Debug\netcoreapp2.1\ProgramAssessment.Entities.csprojAssemblyReference.cache
+G:\ProgramAssessment\ProgramAssessment.Entities\bin\Debug\netcoreapp2.1\ProgramAssessment.Entities.pdb
+G:\ProgramAssessment\ProgramAssessment.Entities\obj\Debug\netcoreapp2.1\ProgramAssessment.Entities.dll
+G:\ProgramAssessment\ProgramAssessment.Entities\obj\Debug\netcoreapp2.1\ProgramAssessment.Entities.pdb
+G:\ProgramAssessment\ProgramAssessment.Entities\bin\Debug\netcoreapp2.1\ProgramAssessment.Entities.runtimeconfig.json
+G:\ProgramAssessment\ProgramAssessment.Entities\bin\Debug\netcoreapp2.1\ProgramAssessment.Entities.runtimeconfig.dev.json

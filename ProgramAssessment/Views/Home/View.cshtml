@@ -1,0 +1,62 @@
+﻿@model ProgramAssessment.ViewModels.ProgramAssessmentVM
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>View</title>
+</head>
+<body>
+
+<h4>ProgramAssessmentVM</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="View">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="JobTitle" class="control-label"></label>
+                <input asp-for="JobTitle" class="form-control" />
+                <span asp-validation-for="JobTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanyInfo" class="control-label"></label>
+                <input asp-for="CompanyInfo" class="form-control" />
+                <span asp-validation-for="CompanyInfo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CandidateProfile" class="control-label"></label>
+                <input asp-for="CandidateProfile" class="form-control" />
+                <span asp-validation-for="CandidateProfile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApplicationInformation" class="control-label"></label>
+                <input asp-for="ApplicationInformation" class="form-control" />
+                <span asp-validation-for="ApplicationInformation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+</body>
+</html>

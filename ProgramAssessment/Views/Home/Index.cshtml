@@ -1,0 +1,155 @@
+﻿@using ProgramAssessment.ViewModels;
+@model ProgramAssessmentVM
+@{
+    ViewBag.Title = "Program Assessment";
+}
+@*<h2> @ViewBag.Title </h2>*@
+
+@if (ViewData["Success"] != null)
+{
+    <p class="alert alert-success" id="successMessage">@ViewData["Success"]</p>
+}
+else if (ViewData["Error"] != null)
+{
+    <p class="alert alert-danger" id="errormessage">@ViewData["Error"]</p>
+}
+
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <section id="loginForm">
+            @using (Html.BeginForm("Create", "Home"))
+            {
+                @*@Html.AntiForgeryToken()*@
+                @*<h5>
+
+
+                <i class="fa fa-link" aria-hidden="true"></i> <a href="http://summernote.org/"> Summernote Rich Text WYSIWYG Editor </a>
+            </h5> <hr />*@
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label class="control-label"> Job Title @((string.IsNullOrEmpty(@Model.Identifier)) ? "" : " - " + @Model.Identifier) </label>
+                    <div class="row">
+                        @*@Html.TextBox(@Model.Id,Model.Id)*@
+
+                        @Html.HiddenFor(m => m.Identifier)
+                        @Html.TextAreaFor(m => m.JobTitle, new {
+                       rows = "3",
+                       style = "height:130px;width:700px;", placeholder = Html.DisplayNameFor(m => m.JobTitle), @class = "form-control"
+                   })
+                        <span asp-validation-for="JobTitle" class="text-danger"></span>
+                    </div>
+                </div>
+                @*<div class="form-group" style="display:none;">                    
+                        @Html.TextBox("Id",Model.Id)
+                </div>*@
+                <div class="form-group">
+                    <div class="row">
+                        <div>
+                            @if (!string.IsNullOrEmpty(ViewBag.File))
+                            {
+                                <img style="height:130px;width:700px;" src="~/images/@ViewBag.File" alt="">
+                            }
+                            else
+                            {
+                                <p style="border-style:solid; border-color:#287EC7;height:130px;width:700px;"><img src="" alt="">No Image</p>
+                            }
+                        </div>
+                    </div>
+                    @*<div class="item">
+                    <div class="product-img">
+                        <img class="img-fluid" src="~/images/product/img3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="product-img">
+                        <img class="img-fluid" src="~/images/product/img2.jpg" alt="">
+                    </div>
+                </div>*@
+                   
+                </div>
+                <div class="form-group">
+                    <label class="control-label"> Company Information</label>
+                    <div class="row">
+                        <div class="input-group">
+                            @Html.TextAreaFor(m => m.CompanyInfo, new {
+                            rows = "10", placeholder = Html.DisplayNameFor(m => m.CompanyInfo), @class = "form-control input-lg textarea-editor"
+                            })
+                            <span asp-validation-for="CompanyInfo" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label"> Description</label>
+                    <div class="row">
+                        <div class="input-group">
+                            @Html.TextAreaFor(m => m.Description, new {
+                            rows = "10",placeholder = Html.DisplayNameFor(m => m.Description), @class = "form-control input-lg textarea-editor"
+                            })
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label"> Candidate Profile</label>
+                    <div class="row">
+                        <div class="input-group">
+                            @Html.TextAreaFor(m => m.CandidateProfile, new {
+                            rows = "10",  placeholder = Html.DisplayNameFor(m => m.CandidateProfile), @class = "form-control input-lg textarea-editor"
+                            })
+                            <span asp-validation-for="CandidateProfile" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label control-label"> Application Information </label>
+                    <div class="row">
+                        
+                        <div class="input-group">
+                            @Html.TextAreaFor(m => m.ApplicationInformation, new {
+                            rows = "10", placeholder = Html.DisplayNameFor(m => m.ApplicationInformation), @class = "form-control input-lg textarea-editor"
+                            })
+                            <span asp-validation-for="ApplicationInformation" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group center-block">
+                    <div class="col-md-offset-5 col-md-10">                       
+                        
+                        <input type="submit" value="Apply" class="btn btn-default" />
+                    </div>
+                </div>
+#line default
+                /**/
+#line hidden @*<div class = "form-group" > <div class = "col-md-offset-2 col-md-10" > < input type = "submit"
+    value = "Log in"
+    class = "btn btn-default" / > < /div> < /div>*@
+        /**/
+
+
+    }
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript"
+            src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css"
+          rel="stylesheet" />
+
+
+}
+
+<script>
+    $(document).ready(function () {
+        // Initialize Editor
+        $('.textarea-editor').summernote({
+            height: 100, // set editor height
+            minHeight: null, // set minimum height of editor
+            maxHeight: null, // set maximum height of editor
+            focus: true // set focus to editable area after initializing summernote
+        });
+    });
+</script>
